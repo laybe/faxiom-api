@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "org.laybe"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "monolith",
+    "baseName": "faxiom",
+    "packageName": "org.laybe",
+    "packageFolder": "org/laybe",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "ZmRiNjE3NDlmNGVmYTliN2Q3MTk1NmE2ZTI2ZDM1MGJmNjc4YmMwNzBmNTcyMmYzZTY0ODRjZWFiMWIwNzFkZDE0M2VlMmNhODdkOTY0M2VjZmUzMzNmMjVjNDY1YTExNmExNTcxN2U3MzBkNTNlYjU2OThjMTY0NjY3OWViOWQ=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "creationTimestamp": 1598945778331,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
