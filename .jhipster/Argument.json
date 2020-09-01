@@ -1,0 +1,37 @@
+{
+  "name": "Argument",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "ArgumentType",
+      "fieldValues": "IMPLICATION,ABJUNCTION"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "proposition",
+      "otherEntityRelationshipName": "premises",
+      "relationshipName": "premise",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "proposition",
+      "otherEntityRelationshipName": "conclusions",
+      "relationshipName": "conclusion",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200901094938",
+  "entityTableName": "argument",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Argument.
+    -->
+    <changeSet id="20200901094938-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="premise_id"
+                                 baseTableName="argument"
+                                 constraintName="fk_argument_premise_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="proposition"/>
+
+        <addForeignKeyConstraint baseColumnNames="conclusion_id"
+                                 baseTableName="argument"
+                                 constraintName="fk_argument_conclusion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="proposition"/>
+
+    </changeSet>
+</databaseChangeLog>

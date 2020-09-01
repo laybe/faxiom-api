@@ -1,0 +1,5 @@
+id;type;premise_id;conclusion_id
+1;IMPLICATION;2;1
+2;ABJUNCTION;5;1
+3;IMPLICATION;6;1
+4;IMPLICATION;7;1

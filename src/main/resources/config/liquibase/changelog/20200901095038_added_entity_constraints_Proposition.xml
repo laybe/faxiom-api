@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Proposition.
+    -->
+    <changeSet id="20200901095038-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="proposition1_id"
+                                 baseTableName="proposition"
+                                 constraintName="fk_proposition_proposition1_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="proposition"/>
+
+        <addForeignKeyConstraint baseColumnNames="proposition2_id"
+                                 baseTableName="proposition"
+                                 constraintName="fk_proposition_proposition2_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="proposition"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,70 @@
+{
+  "name": "Proposition",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "PropositionType",
+      "fieldValues": "CONNECTION,SINGLE"
+    },
+    {
+      "fieldName": "text",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "connectionType",
+      "fieldType": "ConnectionType",
+      "fieldValues": "CONJUNCTION,DISJUNCTION"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "argument",
+      "otherEntityRelationshipName": "premise",
+      "relationshipName": "premises"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "argument",
+      "otherEntityRelationshipName": "conclusion",
+      "relationshipName": "conclusions"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "proposition",
+      "otherEntityRelationshipName": "proposition1",
+      "relationshipName": "partOfConnections1"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "proposition",
+      "otherEntityRelationshipName": "proposition2",
+      "relationshipName": "partOfConnections2"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "proposition",
+      "otherEntityRelationshipName": "partOfConnections1",
+      "relationshipName": "proposition1",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "proposition",
+      "otherEntityRelationshipName": "partOfConnections2",
+      "relationshipName": "proposition2",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200901095038",
+  "entityTableName": "proposition",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,8 @@
+id;type;text;connection_type;proposition1_id;proposition2_id
+1;SINGLE;La chimie, qui nous fournit aujourd’hui bon nombre de produits « incorporant » du pétrole ou du gaz (par exemple le plastique, donc, mais encore les engrais ou…les ordinateurs), ne peut pas être remplacé par une énergie renouvelable.;NULL;NULL;NULL
+2;CONNECTION;NULL;CONJUNCTION;3;4
+3;SINGLE;def;NULL;NULL;NULL
+4;SINGLE;ghi;NULL;NULL;NULL
+5;SINGLE;Il est possible de faire toute la chimie organique avec du bois.;NULL;NULL;NULL
+6;SINGLE;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porta magna nec sapien mollis, et sollicitudin lacus blandit. Vivamus bibendum augue sit amet leo aliquam, vel sollicitudin nisi pulvinar. Cras fringilla efficitur quam.;NULL;NULL;NULL
+7;SINGLE;Cras commodo tempor elementum. Morbi tempor ante sed ligula iaculis dapibus. Maecenas ut dolor eget mi mattis auctor eu sed ligula. Donec id posuere nisl. Cras quis felis enim.;NULL;NULL;NULL
