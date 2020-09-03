@@ -11,14 +11,14 @@
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "proposition",
-      "otherEntityRelationshipName": "premises",
+      "otherEntityRelationshipName": "conclusions",
       "relationshipName": "premise",
       "otherEntityField": "id"
     },
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "proposition",
-      "otherEntityRelationshipName": "conclusions",
+      "otherEntityRelationshipName": "premises",
       "relationshipName": "conclusion",
       "otherEntityField": "id"
     }

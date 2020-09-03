@@ -27,11 +27,11 @@ public class Argument implements Serializable {
     private ArgumentType type;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "premises", allowSetters = true)
+    @JsonIgnoreProperties(value = "conclusions", allowSetters = true)
     private Proposition premise;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "conclusions", allowSetters = true)
+    @JsonIgnoreProperties(value = "premises", allowSetters = true)
     private Proposition conclusion;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

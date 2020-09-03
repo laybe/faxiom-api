@@ -37,16 +37,20 @@ public class Proposition implements Serializable {
     @Column(name = "connection_type")
     private ConnectionType connectionType;
 
-    @OneToMany(mappedBy = "premise")
-    private Set<Argument> premises = new HashSet<>();
-
-    @OneToMany(mappedBy = "conclusion")
+    @OneToMany(mappedBy = "premise", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties(value = "premise", allowSetters = true)
     private Set<Argument> conclusions = new HashSet<>();
 
-    @OneToMany(mappedBy = "proposition1")
+    @OneToMany(mappedBy = "conclusion", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties(value = "conclusion", allowSetters = true)
+    private Set<Argument> premises = new HashSet<>();
+
+    @OneToMany(mappedBy = "proposition1", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties(value = "premises", allowSetters = true)
     private Set<Proposition> partOfConnections1s = new HashSet<>();
 
-    @OneToMany(mappedBy = "proposition2")
+    @OneToMany(mappedBy = "proposition2", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties(value = "premises", allowSetters = true)
     private Set<Proposition> partOfConnections2s = new HashSet<>();
 
     @ManyToOne
@@ -105,31 +109,6 @@ public class Proposition implements Serializable {
         this.connectionType = connectionType;
     }
 
-    public Set<Argument> getPremises() {
-        return premises;
-    }
-
-    public Proposition premises(Set<Argument> arguments) {
-        this.premises = arguments;
-        return this;
-    }
-
-    public Proposition addPremises(Argument argument) {
-        this.premises.add(argument);
-        argument.setPremise(this);
-        return this;
-    }
-
-    public Proposition removePremises(Argument argument) {
-        this.premises.remove(argument);
-        argument.setPremise(null);
-        return this;
-    }
-
-    public void setPremises(Set<Argument> arguments) {
-        this.premises = arguments;
-    }
-
     public Set<Argument> getConclusions() {
         return conclusions;
     }
@@ -141,18 +120,43 @@ public class Proposition implements Serializable {
 
     public Proposition addConclusions(Argument argument) {
         this.conclusions.add(argument);
-        argument.setConclusion(this);
+        argument.setPremise(this);
         return this;
     }
 
     public Proposition removeConclusions(Argument argument) {
         this.conclusions.remove(argument);
-        argument.setConclusion(null);
+        argument.setPremise(null);
         return this;
     }
 
     public void setConclusions(Set<Argument> arguments) {
         this.conclusions = arguments;
+    }
+
+    public Set<Argument> getPremises() {
+        return premises;
+    }
+
+    public Proposition premises(Set<Argument> arguments) {
+        this.premises = arguments;
+        return this;
+    }
+
+    public Proposition addPremises(Argument argument) {
+        this.premises.add(argument);
+        argument.setConclusion(this);
+        return this;
+    }
+
+    public Proposition removePremises(Argument argument) {
+        this.premises.remove(argument);
+        argument.setConclusion(null);
+        return this;
+    }
+
+    public void setPremises(Set<Argument> arguments) {
+        this.premises = arguments;
     }
 
     public Set<Proposition> getPartOfConnections1s() {

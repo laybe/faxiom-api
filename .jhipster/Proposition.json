@@ -21,13 +21,13 @@
       "relationshipType": "one-to-many",
       "otherEntityName": "argument",
       "otherEntityRelationshipName": "premise",
-      "relationshipName": "premises"
+      "relationshipName": "conclusions"
     },
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "argument",
       "otherEntityRelationshipName": "conclusion",
-      "relationshipName": "conclusions"
+      "relationshipName": "premises"
     },
     {
       "relationshipType": "one-to-many",
